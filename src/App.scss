@@ -1,0 +1,51 @@
+@use "./styles/typography" as *;
+@use "./styles/colors" as *;
+@use "./styles/mixins" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: JosefinSans, sans-serif;
+  margin: 0;
+  background-color: $divider-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: Avenir, Avenir2, sans-serif;
+}
+
+input {
+  font-family: Avenir, Avenir2, sans-serif;
+}
+
+textarea {
+  font-family: Avenir, Avenir2, sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+
+  @include desktop {
+    justify-content: center;
+  }
+}
+
+.header__search {
+  height: 50px;
+  border-radius: 10px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
