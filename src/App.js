@@ -69,17 +69,18 @@ function App() {
               <div>
                 <h2>Find doctors in your area: </h2>
                 <h3>Search By:</h3>
+                <div className="card-item">
+                  <h4>Name</h4>
+                </div>
+                <div className="card-item">
+                  <h4>City/State</h4>
+                </div>
+                <div className="card-item">
+                  <h4>Specialty</h4>
+                </div>
               </div>
             )}
-            <div>
-              <h4>Name</h4>
-            </div>
-            <div>
-              <h4>City/State</h4>
-            </div>
-            <div>
-              <h4>Specialty</h4>
-            </div>
+
           </article>
         </section>
       </main>
