@@ -4,6 +4,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import SearchIcon from "./assets/icons/search.svg";
 
+import PCP from "./assets/images/4441629.png"
+import Eye from "./assets/images/eye2.png"
+import Tooth from "./assets/images/tooth2.png"
+
 function App() {
   const [results, setResults] = useState(null);
   const [display, setDisplay] = useState(null);
@@ -56,7 +60,7 @@ function App() {
             {results ? (
               results.map((result) => (
                 <>
-                  <div key={result.id}>
+                  <div key={result.id} className="doctors">
                     <h1>{result.name}</h1>
                     <p>Street Address: {result.street}</p>
                     <p>City: {result.city}</p>
@@ -67,22 +71,34 @@ function App() {
               ))
             ) : (
               <div>
-                <h2>Find doctors in your area: </h2>
-                <h3>Search By:</h3>
-                <div className="card-item">
-                  <h4>Name</h4>
+                <h2>Welcome to DOC DOC GOOSE!</h2>
+                <p>We'll help match you with the right specialist!</p>
+                <p>Just input your city/state or the specialty care you need to match with a doctor. </p>
+                <h3 className="subtitle">Top-searched specialties: </h3>
+                <div className="card-wrapper">
+                  <div className="card-item">
+                    <img src={PCP} className="icon"></img>
+                    <h4>Primary Care</h4>
+                  </div>
+                  <div className="card-item">
+                  <img src={Tooth} className="icon"></img>
+                    <h4>Dentist</h4>
+
+                  </div>
+                  <div className="card-item">
+                  <img src={Eye} className="icon"></img>
+                    <h4>Eye Doctor</h4>
+                  </div>
                 </div>
-                <div className="card-item">
-                  <h4>City/State</h4>
-                </div>
-                <div className="card-item">
-                  <h4>Specialty</h4>
-                </div>
+                <div></div>
               </div>
             )}
-
           </article>
         </section>
+        <footer className="footer">
+          <h2>Made by Daniel and Gerik!</h2>
+          <h5 className="footer__subtitle">and some help from our educators 🧡 </h5>
+        </footer>
       </main>
     </>
   );
